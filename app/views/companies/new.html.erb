@@ -1,0 +1,25 @@
+
+<div class="page-header">
+  <h1>Create a Company</h1>
+</div>
+
+<%= form_for @company do |f| %>
+
+     <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+     </p>
+
+     <p>
+        <%= f.label :suffix %>
+        <%= f.text_field :suffix %>
+     </p>
+
+      <p>
+        <%= f.label :catch_phrase %>
+        <%= f.text_field :catch_phrase %>
+     </p>
+
+<%= f.submit %>
+
+<% end %>
