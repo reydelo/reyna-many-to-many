@@ -16,9 +16,9 @@ class ProductsController < ApplicationController
     def create
       @product = Product.new(product_params)
       if @product.save
-        redirect_to root_path
+        redirect_to product_path(@product)
       else
-        render :new, notice: 'Product form invalid'
+        redirect_to new_product_path, notice: 'Product form invalid'
       end
     end
 

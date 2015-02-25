@@ -18,7 +18,7 @@ class CompaniesController < ApplicationController
       if @company.save
         redirect_to companies_path
       else
-        render :new, notice: 'Company form invalid'
+        redirect_to new_company_path, notice: 'Company form invalid'
       end
     end
 

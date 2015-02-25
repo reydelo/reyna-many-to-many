@@ -11,8 +11,11 @@ class CompanyReviewsController < ApplicationController
       @company_review = CompanyReview.new(company_review_params)
       @company_review.company_id = @company.id
       @company_review.user_id = current_user.id
-      @company_review.save
-      redirect_to reviews_path
+      if @company_review.save
+        redirect_to company_path(@company)
+      else
+        redirect_to new_company_company_review_path(@company), notice: "Form is invalid"
+      end
     else
       redirect_to login_path, notice: "Must be logged in to review a company"
     end
