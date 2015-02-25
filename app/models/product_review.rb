@@ -1,4 +1,4 @@
 class ProductReview < ActiveRecord::Base
-  has_many :product
-  has_many :user
+  belongs_to :product
+  belongs_to :user
 end

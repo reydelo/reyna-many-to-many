@@ -12,7 +12,7 @@ class ProductReviewsController < ApplicationController
       @product_review.product_id = @product.id
       @product_review.user_id = current_user.id
       @product_review.save
-      redirect_to products_path
+      redirect_to reviews_path
     else
       redirect_to login_path, notice: "Must be logged in to review a product"
     end
@@ -20,7 +20,7 @@ class ProductReviewsController < ApplicationController
 
   private
   def product_review_params
-    params.require(:product_review).permit(:title, :desciption, :rating)
+    params.require(:product_review).permit(:title, :description, :rating)
   end
 
 end
