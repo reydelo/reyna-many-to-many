@@ -1,0 +1,44 @@
+<div class='page-header'>
+  <h1> <%= @product.name %> </h1>
+</div>
+
+<%= link_to "Review this Product", new_product_product_review_path(@product) %>
+<br>
+<br>
+<br>
+<table class="table table-striped">
+  <tr>
+      <th>Price</th>
+      <th>Company</th>
+  </tr>
+      <tbody>
+          <tr>
+              <td>$<%= @product.price.round(2) %></td>
+              <td><%= @product.company.name %> </td>
+         </tr>
+      </tbody>
+</table>
+<br>
+<br>
+<br>
+<br>
+
+<table class="table table-striped">
+            <h2>Product Reviews for <%= @product.name %></h2>
+            <tr>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Rating</th>
+              <th>User</th>
+           </tr>
+              <tbody>
+                <% @product.product_reviews.each do |product_review| %>
+                  <tr>
+                      <td><%= product_review.title %></td>
+                      <td><%= product_review.description %></td>
+                      <td><%= product_review.rating %></td>
+                      <td> <%= product_review.user.name %> </td>
+                 </tr>
+                    <% end %>
+              </tbody>
+      </table>

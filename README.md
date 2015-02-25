@@ -1,4 +1,4 @@
-#### Modeling Practice
+<!-- #### Modeling Practice
 
 bundle
 
@@ -14,7 +14,7 @@ No need to create migrations or alter the schema.
 
 - Don't worry about Edit pages.
 
-- The Authentication/Session controller is very basic with no password for authentication. Don't worry about this. It is there to add the current_user's ID to the review they are writing.
+- The Authentication/Session controller is very basic with no password for authentication. Don't worry about this. It is there to add the current_user's ID to the review they are writing. -->
 
 - We are missing some stuff for Companies and Products. There are Index pages but that is it. Add Show Pages for Companies and Products that link from their name in the index page in their respective table. Add the ability to create Companies and Products.
 
